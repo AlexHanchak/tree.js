@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  p some text #{ring}
+
+  h1= ring
+  ul
+    li My text
+
+  input(type='text').class-name#anyID
+  if condition
+    p It`s true
+  - var condition = true
+  - var some = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaa!!'
+  - var math = 654+654
+  if condition
+    h1 it`s index file set true
+    p= math
+    h2= some
+  - var anyArray = [1,2,3]
+  each value in anyArray
+    p= value
+
+  else
+    h6 folse
+
+
